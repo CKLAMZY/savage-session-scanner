@@ -1,0 +1,13 @@
+{
+    "name": "cklamzy-xmd-scanner",
+    "version": "1.0.0",
+    "description": "CKLAMZY session scanner with number pairing",
+    "main": "session-api.js",
+    "scripts": {
+        "start": "node session-api.js"
+    },
+    "dependencies": {
+        "@whiskeysockets/baileys": "^6.7.1",
+        "express": "^4.18.2"
+    }
+}
