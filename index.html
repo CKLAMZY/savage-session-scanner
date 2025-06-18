@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CKLAMZY XMD - Session Scanner</title>
+  <style>
+    body { font-family: sans-serif; background: #0f0f23; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+    input, button { padding: 10px; font-size: 1.1em; margin-top: 15px; border-radius: 8px; border: none; }
+    button { background-color: #007bff; color: white; cursor: pointer; }
+    #codeBox { margin-top: 20px; font-size: 1.5em; background: #222; padding: 10px 20px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>CKLAMZY XMD</h1>
+  <p>Enter your WhatsApp Number:</p>
+  <input type="text" id="numberInput" placeholder="+255..." />
+  <button onclick="generateCode()">Generate Session</button>
+  <div id="codeBox">Session Code: <span id="code">WILL_APPEAR_HERE</span></div>
+
+  <script>
+    async function generateCode() {
+      const number = document.getElementById('numberInput').value;
+      if (!number) {
+        alert('Please enter a phone number');
+        return;
+      }
+      document.getElementById('code').innerText = 'Generating...';
+
+      // Simulated code generator
+      const code = Math.random().toString(36).substring(2, 10).toUpperCase();
+      document.getElementById('code').innerText = code;
+    }
+  </script>
+</body>
+</html>
